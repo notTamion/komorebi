@@ -369,7 +369,7 @@ pub struct StaticConfig {
     #[serde(skip_serializing_if = "Option::is_none")]
     // this option is a little special because it is only consumed by komorebic
     pub bar_configurations: Option<Vec<PathBuf>>,
-    /// Whether new windows should automatically be moved to the focused monitor
+    /// Whether new windows should automatically be moved to the focused monitor (default: false)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub move_new_windows_to_focused_monitor: Option<bool>,
 }
